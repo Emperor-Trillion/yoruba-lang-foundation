@@ -1,0 +1,12 @@
+# Ignore virtual environment
+.ylf/
+
+# Ignore caches and compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
