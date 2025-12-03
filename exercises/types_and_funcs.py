@@ -1,4 +1,4 @@
-#from utils.math_utils import mean
+from utils.math_utils import mean
 
 int_num = 5
 float_num = 6.5

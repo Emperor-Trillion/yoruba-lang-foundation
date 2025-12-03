@@ -1,4 +1,3 @@
-from exercises.types_and_funcs import Entry
 def mean(num: list[float]) -> float:
     """Calculates the mean of a list of number
 
@@ -13,7 +12,3 @@ def mean(num: list[float]) -> float:
 
     else:
         raise TypeError(f"Expecting all values to be of type float")
-    
-
-entry = Entry("go", "verb", ["to proceed in a direcion", "to move towards something"])
-print(entry)
