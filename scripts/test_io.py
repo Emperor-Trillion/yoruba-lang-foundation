@@ -11,8 +11,7 @@ Test script for utils/io.py functions:
 7. Run all steps in __main__.
 """
 
-# import os
-# import json
+
 from utils.io import read_json, write_json_safely
 
 
