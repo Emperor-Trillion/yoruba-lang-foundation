@@ -69,8 +69,15 @@ def simulate_malformed_json(path: str) -> None:
 
 def validate_data_shape(data: dict | list) -> None:
     """Step 5: Validate data shape and raise DataError if invalid."""
-    if not isinstance(data, dict) or "users" not in data:
-        raise DataError("DataError: Expected a dict with a 'users' key.")
+    if not isinstance(data, dict):
+        raise DataError("Expected a dict, got something else.", data)
+
+    if "users" not in data:
+        raise DataError("Missing required 'users' key in data.", data)
+
+    if not isinstance(data["users"], list):
+        raise DataError("'users' key must map to a list.", data)
+
     print("Data shape validated successfully.")
 
 
