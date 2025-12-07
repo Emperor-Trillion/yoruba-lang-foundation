@@ -17,7 +17,16 @@ from utils.io import read_json, write_json_safely
 
 class DataError(Exception):
     """Custom exception for invalid data shape."""
-    pass
+
+    def __init__(self, message: str, data: object = None):
+        super().__init__(message)
+        self.data = data  # optional: store the invalid data for debugging
+
+    def __str__(self):
+        base = super().__str__()
+        if self.data is not None:
+            return f"{base} | Invalid data: {repr(self.data)}"
+        return base
 
 
 def create_sample_json(path: str) -> None:
